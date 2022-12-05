@@ -1,0 +1,124 @@
+{
+  "AUTH": {
+    "SIGN_IN": {
+      "FIELDS": {
+        "EMAIL": "Entrez votre adresse email",
+        "PASSWORD": "Tapez votre mot de passe"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "L'adresse email est nécessaire",
+            "EMAIL": "Veuillez saisir une adresse email valide"
+          },
+          "PASSWORD": {
+            "REQUIRED": "Le mot de passe est requis"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SIGN_IN": "Se connecter"
+      },
+      "LINKS": {
+        "FORGOT_PASSWORD": "Mot de passe oublié ?"
+      }
+    },
+    "SIGN_UP": {
+      "FIELDS": {
+        "NAME": "Enter your name",
+        "EMAIL": "Enter your email address",
+        "PASSWORD": "Type your password"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "L'adresse email est nécessaire",
+            "EMAIL": "Veuillez saisir une adresse email valide"
+          },
+          "PASSWORD": {
+            "REQUIRED": "Le mot de passe est requis"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "La confirmation du mot de passe est requise"
+          },
+          "NAME": {
+            "REQUIRED": "Le nom est requis"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SIGN_UP": "S'inscrire"
+      }
+    },
+    "FORGOT_PASSWORD": {
+      "MESSAGE": "<strong>Oups ! Il semble que vous avez oublié votre mot de passe?</strong><br>Pas de soucis, il suffit d'entrer votre adresse email ci-dessous et cliquez sur le bouton envoyer, nous vous enverrons un email de récupération.",
+      "FIELDS": {
+        "EMAIL": "Entrez votre adresse email"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "L'adresse email est nécessaire",
+            "EMAIL": "Veuillez saisir une adresse email valide"
+          },
+          "NAME": {
+            "REQUIRED": "Le nom est nécessaire"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SEND": "Envoyer"
+      },
+      "LINKS": {
+        "SIGN_IN": "Revenir à page d'authentification"
+      }
+    },
+    "RESET_PASSWORD": {
+      "FIELDS": {
+        "NEW_PASSWORD": "Tapez un nouveau mot de passe",
+        "CONFIRM_PASSWORD": "Confirmez votre nouveau mot de passe"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "TOKEN": {
+            "REQUIRED": "Le code est requis"
+          },
+          "NEW_PASSWORD": {
+            "REQUIRED": "Le mot de passe est requis"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "La confirmation du mot de passe est requise"
+          }
+        }
+      },
+      "BUTTONS": {
+        "CHANGE": "Changer le mot de passe"
+      },
+      "LINKS": {
+        "SIGN_IN": "Revenir à page d'authentification"
+      }
+    },
+    "VERIFY": {
+      "FIELDS": {
+        "NEW_PASSWORD": "Tapez un mot de passe pour votre compte",
+        "CONFIRM_PASSWORD": "Confirmez votre mot de passe"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "NEW_PASSWORD": {
+            "REQUIRED": "Le mot de passe est requis"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "La confirmation du mot de passe est requise"
+          }
+        }
+      },
+      "BUTTONS": {
+        "ACTIVATE": "Activer le compte"
+      },
+      "LINKS": {
+        "SIGN_IN": "Revenir à page d'authentification"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.btn {
+  @apply flex justify-center items-center relative border-none font-normal cursor-pointer;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px 16px;
+  transition: .2s;
+
+
+  &[disabled] {
+    background: rgba(17, 17, 17, .08) !important;
+    color: rgba(0, 0, 0, .2) !important;
+
+    svg {
+      color: rgba(0, 0, 0, .2) !important;
+      fill: rgba(0, 0, 0, .2) !important;
+    }
+  }
+}
+
+
+.btn-primary {
+  background-color: $primary-color;
+  color: #fff;
+  transition: all .3s ease;
+  outline-color: $primary-color;
+
+  &:hover {
+    background: $link-hover-color;
+  }
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-radius {
+  border-radius: 8px;
+}
+
+.btn-gray {
+  border: 1px solid #707070;
+  background-color: #ecf1f4;
+  color:  #424242;
+  transition: .5s ease;
+
+  svg {
+    color:  #424242;
+    fill:  #424242;
+  }
+
+  &:hover {
+    background: darken(#ecf1f4, 5%);
+  }
+}

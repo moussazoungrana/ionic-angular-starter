@@ -1,0 +1,118 @@
+<div class="auth-layout-container">
+  <div class="auth-form-container">
+
+    <ion-card>
+      <ion-card-header>
+        <h1 class="auth-title"> Create a App Account</h1>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ng-container *ngIf="errors">
+          <div class="alert alert-error ">Please complete the form correctly !</div>
+          <ul class="list-none pl-1 mb-5">
+            <li *ngFor="let error of errors" class="error" style="margin-top: 4px;">{{ error }}</li>
+          </ul>
+        </ng-container>
+
+        <form action="" [formGroup]="form" class="mb-5" (submit)="register()">
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="control-wrapper">
+              <input name="name" formControlName="name" class="form-control" type="text" id="name"/>
+            </div>
+            <ng-container *ngIf="!controls.name.pristine && controls.name.invalid">
+
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.name.errors && controls.name.errors.required">
+                {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.NAME.REQUIRED' | translate }}
+              </p>
+            </ng-container>
+          </div>
+
+          <div class="form-group ">
+            <label for="email">Email</label>
+            <div class="control-wrapper">
+              <input name="email" formControlName="email" class="form-control" type="email" id="email"/>
+            </div>
+
+            <ng-container *ngIf="!controls.email.pristine && controls.email.invalid">
+
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.required">
+                {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.EMAIL.REQUIRED' | translate }}
+              </p>
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.email">
+                {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.EMAIL.EMAIL' | translate }}
+              </p>
+            </ng-container>
+
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="control-wrapper">
+              <input name="password" formControlName="password" class="form-control" type="password" id="password"/>
+            </div>
+
+            <ng-container *ngIf="!controls.password.pristine && controls.password.invalid">
+
+              <p class="error" style="margin-top: 4px;"
+                 *ngIf="controls.password.errors && controls.password.errors.required">
+                {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.PASSWORD.REQUIRED' | translate }}
+              </p>
+
+            </ng-container>
+          </div>
+
+          <div class="form-group">
+            <label for="password_confirmation">Password Confirmation</label>
+            <div class="control-wrapper">
+              <input name="password_confirmation" formControlName="password_confirmation" class="form-control"
+                     type="password" id="password_confirmation"/>
+            </div>
+            <ng-container *ngIf="!controls.password_confirmation.pristine && controls.password_confirmation.invalid">
+
+              <p class="error" style="margin-top: 4px;"
+                 *ngIf="controls.password_confirmation.errors && controls.password_confirmation.errors.required">
+                {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.CONFIRM_PASSWORD.REQUIRED' | translate }}
+              </p>
+
+            </ng-container>
+          </div>
+
+          <button type="submit" class="btn mt-6 btn-primary btn-full btn-radius" [disabled]="processing"> Sign Up</button>
+        </form>
+
+        <div class="text-center font-bold">
+          <ion-nav-link routerLink="/auth" class="primary-color"> Back to Sign In page</ion-nav-link>
+        </div>
+
+
+        <div class="separator mt-6 mb-7">Or</div>
+
+        <div class="logo-block-wrapper">
+          <a href="" class="logo-block">
+            <img src="assets/icon/azure.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/google.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/facebook.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/linkedin.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/twitter.svg" alt="" class="logo-block-img">
+          </a>
+
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+
+
+</div>

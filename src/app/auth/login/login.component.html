@@ -1,0 +1,94 @@
+<div class="auth-layout-container">
+  <div class="auth-form-container">
+
+
+    <ion-card>
+      <ion-card-header>
+        <h1 class="auth-title"> Sign In to App</h1>
+      </ion-card-header>
+      <ion-card-content>
+
+        <form action="" [formGroup]="form" class="mb-5" (submit)="login()">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="control-wrapper">
+              <input name="email" class="form-control" type="email" id="email" formControlName="email"/>
+            </div>
+
+            <ng-container *ngIf="!controls.email.pristine && controls.email.invalid">
+
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.required">
+                {{ 'AUTH.SIGN_IN.MESSAGES.ERRORS.EMAIL.REQUIRED' | translate }}
+              </p>
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.email">
+                {{ 'AUTH.SIGN_IN.MESSAGES.ERRORS.EMAIL.EMAIL' | translate }}
+              </p>
+            </ng-container>
+
+            <ng-container *ngIf="errors">
+              <ul class="list-none">
+                <li *ngFor="let error of errors" class="error" style="margin-top: 4px;">{{ error }}</li>
+              </ul>
+            </ng-container>
+
+          </div>
+
+          <div class="form-group">
+            <div class="password-group">
+              <label for="password">Password</label>
+              <p class="password-forget">
+                <ion-nav-link routerLink="/auth/forgot-password">Forgot Password</ion-nav-link>
+              </p>
+            </div>
+
+            <div class="control-wrapper">
+              <input name="password" class="form-control" formControlName="password" type="password" id="password"/>
+            </div>
+
+            <ng-container *ngIf="!controls.password.pristine && controls.password.invalid">
+
+              <p class="error" style="margin-top: 4px;" *ngIf="controls.password.errors && controls.password.errors.required">
+                {{ 'AUTH.SIGN_IN.MESSAGES.ERRORS.PASSWORD.REQUIRED' | translate }}
+              </p>
+
+            </ng-container>
+
+          </div>
+          <button type="submit" class="btn mt-6 btn-primary btn-full btn-radius" [disabled]="processing"> Sign In
+          </button>
+        </form>
+
+        <div class="text-center font-bold">
+          <ion-nav-link routerLink="/auth/register" class="primary-color"> Create new account</ion-nav-link>
+        </div>
+
+        <div class="separator mt-6 mb-7">Or</div>
+
+
+        <div class="logo-block-wrapper">
+          <a href="" class="logo-block">
+            <img src="assets/icon/azure.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/google.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/facebook.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/linkedin.svg" alt="" class="logo-block-img">
+          </a>
+          <a href="" class="logo-block">
+            <img src="assets/icon/twitter.svg" alt="" class="logo-block-img">
+          </a>
+
+
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,143 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+ /* tailwind css for ionic*/
+
+ @import 'tailwindcss/base';
+ @import 'tailwindcss/components';
+ @import 'tailwindcss/utilities';
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+// @import "~@ionic/angular/css/padding.css";
+// @import "~@ionic/angular/css/float-elements.css";
+// @import "~@ionic/angular/css/text-alignment.css";
+// @import "~@ionic/angular/css/text-transformation.css";
+// @import "~@ionic/angular/css/flex-utils.css";
+
+@import "sass/tools/variables";
+:root{
+  --space:8px;
+ --ion-background-color:#{$site-bg};
+  --container-padding: 16px;
+  --container-width: calc(100% - var(--container-padding) * 2);
+
+
+}
+
+.main-container{
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}
+
+
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+@function space($i) {
+  @return calc(#{$i} * var(--space));
+}
+
+
+@import "sass/modules/form";
+@import "sass/modules/btn";
+@import "sass/modules/quiz";
+@import "sass/pages/auth";
+@import "sass/pages/dashboard";
+@import "sass/pages/quiz-session";
+
+
+body {
+  font-family: $font-family !important;
+  font-size: $base-font-size !important;
+  min-height: 100vh;
+  height: 100%;
+  line-height: 1.6;
+  color: black;
+  word-break: break-word;
+}
+
+
+
+.separator {
+  overflow: hidden;
+  text-align: center;
+
+  &:before,
+  &:after {
+    background-color: var(--separator-color, rgba(206, 206, 206, 0.8));
+    content: "";
+    display: inline-block;
+    height: var(--separator-height, 2px);
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+}
+
+.primary-color{
+  color: $primary-color!important;
+}
+
+
+.alert {
+  padding: 8px 16px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-family: $font-family;
+
+  &.center {
+    text-align: center;
+  }
+
+  &.alert-success {
+    background-color: #009688;
+    color: white;
+  }
+
+  &.alert-error {
+    background-color: #ee4c4c;
+    color: white;
+  }
+
+  &.alert-info {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.error {
+  color: #ee4c4c;
+  font-size: 14px!important;
+}

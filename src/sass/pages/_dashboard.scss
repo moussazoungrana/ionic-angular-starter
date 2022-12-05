@@ -1,0 +1,106 @@
+.dashboard-profile-page {
+  margin-top: space(3);
+  margin-bottom: space(3);
+
+  .section-title {
+
+    font-weight: 700;
+    color: $title-blue;
+    font-size: 24px;
+
+    &.second-title {
+      font-size: 22px;
+      margin-left: 0;
+
+    }
+  }
+}
+
+.user-avatar {
+  @apply flex justify-center items-center cursor-pointer;
+  margin-top: space(2);
+
+  .user-avatar-img {
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    //font-size: 14px;
+    color: black;
+    object-fit: cover;
+    object-position: center center;
+    border: 1px solid $site-bg;
+  }
+}
+
+.dashboard-index-page, .dashboard-session-page, .dashboard-history-page {
+  margin-top: space(3);
+  margin-bottom: space(4);
+
+  .view-button--wrapper {
+    @apply flex flex-row justify-end items-center;
+
+    span {
+      color: $primary-dark-color;
+      font-weight: 500;
+    }
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .title-group {
+    @apply flex justify-start items-center;
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: $title-blue;
+    }
+
+    .section-logo {
+      width: 28px;
+      height: 28px;
+      margin-right: space(1);
+    }
+
+  }
+}
+
+.dashboard-quiz-page, .dashboard-assessment-page {
+  margin-top: space(3);
+  margin-bottom: space(3);
+
+  .section-title {
+    font-weight: 700;
+    color: $title-blue;
+    font-size: 20px;
+    margin-top: space(3);
+
+  }
+
+  .second-tags {
+    margin-top: space(4);
+    display: block;
+    font-size: 14px;
+    color: $primary-dark-color;
+    font-weight: 700;
+  }
+
+  .start-button--wrapper {
+    @apply flex flex-row justify-end items-center;
+
+    span {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    img, svg {
+      display: block;
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+

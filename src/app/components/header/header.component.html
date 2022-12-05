@@ -1,0 +1,33 @@
+
+      <ion-menu contentId="menu-main-content">
+        <ion-header>
+          <ion-toolbar color="tertiary">
+            <ion-title>Hello App</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/">My Dashboard</ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item routerLink="/profile">Profile</ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item (click)="logout()" >Logout</ion-item>
+          </ion-menu-toggle>
+
+
+        </ion-content>
+      </ion-menu>
+
+      <div id="menu-main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Hello App</ion-title>
+          </ion-toolbar>
+        </ion-header>
+    </div>

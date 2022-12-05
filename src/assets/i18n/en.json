@@ -1,0 +1,121 @@
+{
+  "AUTH": {
+    "SIGN_IN": {
+      "FIELDS": {
+        "EMAIL": "Enter your email address",
+        "PASSWORD": "Type your password"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "The email address is required",
+            "EMAIL": "Please type a valid email address"
+          },
+          "PASSWORD": {
+            "REQUIRED": "The password is required"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SIGN_IN": "Sign in"
+      },
+      "LINKS": {
+        "FORGOT_PASSWORD": "Forgot password?"
+      }
+    },
+    "SIGN_UP": {
+      "FIELDS": {
+        "NAME": "Enter your name",
+        "EMAIL": "Enter your email address",
+        "PASSWORD": "Type your password"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "The email address is required",
+            "EMAIL": "Please type a valid email address"
+          },
+          "PASSWORD": {
+            "REQUIRED": "The password is required"
+          },
+          "NAME": {
+            "REQUIRED": "The name is required"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "The password confirmation is required"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SIGN_UP": "Sign up"
+      }
+    },
+    "FORGOT_PASSWORD": {
+      "MESSAGE": "<strong>Whoops! It seems you have forgotten your password?</strong><br>No worries, just enter your email address below and click on the send button, we will send you a recovery email.",
+      "FIELDS": {
+        "EMAIL": "Enter your email address"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "EMAIL": {
+            "REQUIRED": "The email address is required",
+            "EMAIL": "Please type a valid email address"
+          }
+        }
+      },
+      "BUTTONS": {
+        "SEND": "Send"
+      },
+      "LINKS": {
+        "SIGN_IN": "Back to sign in"
+      }
+    },
+    "RESET_PASSWORD": {
+      "FIELDS": {
+        "NEW_PASSWORD": "Type a new password",
+        "CONFIRM_PASSWORD": "Confirm your new password"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "TOKEN": {
+            "REQUIRED": "The token is required"
+          },
+          "NEW_PASSWORD": {
+            "REQUIRED": "The password is required"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "The password confirmation is required"
+          }
+        }
+      },
+      "BUTTONS": {
+        "CHANGE": "Change password"
+      },
+      "LINKS": {
+        "SIGN_IN": "Back to sign in"
+      }
+    },
+    "VERIFY": {
+      "FIELDS": {
+        "NEW_PASSWORD": "Type a password to your account",
+        "CONFIRM_PASSWORD": "Confirm your password"
+      },
+      "MESSAGES": {
+        "ERRORS": {
+          "NEW_PASSWORD": {
+            "REQUIRED": "The password is required"
+          },
+          "CONFIRM_PASSWORD": {
+            "REQUIRED": "The password confirmation is required"
+          }
+        }
+      },
+      "BUTTONS": {
+        "ACTIVATE": "Activate account"
+      },
+      "LINKS": {
+        "SIGN_IN": "Back to sign in"
+      }
+    }
+  }
+}

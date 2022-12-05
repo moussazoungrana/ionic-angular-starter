@@ -1,0 +1,62 @@
+.auth-layout-container {
+  @apply flex justify-center items-center;
+  align-items: flex-start;
+  padding: space(8) 0 space(2) 0;
+
+
+  .auth-title {
+    @apply font-bold text-center;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: $title-blue;
+
+  }
+}
+
+.auth-form-container {
+  width: 100%;
+  max-width: 580px;
+
+}
+
+.logo-block-wrapper {
+  @apply flex flex-row justify-center items-center;
+  margin-top: space(1);
+  margin-bottom: space(1);
+
+  .logo-block {
+    padding: space(1);
+    background-color: rgba(206, 206, 206, 0.5);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+
+    &:hover {
+      background-color: rgba(98, 96, 96, 0.5);
+    }
+
+    &:not(:last-child) {
+      margin-right: space(2);
+    }
+  }
+
+  .logo-block-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.password-group {
+  @apply flex flex-row justify-between items-center;
+}
+
+.password-forget {
+  text-align: right;
+  ion-nav-link{
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 500;
+  }
+
+
+
+}

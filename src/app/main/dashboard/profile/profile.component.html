@@ -1,0 +1,129 @@
+<div class="dashboard-profile-page main-container">
+
+  <h1 class="section-title text-center">My profile</h1>
+
+  <div class="user-avatar">
+    <img src="assets/avatar.png" alt="" class="user-avatar-img">
+  </div>
+
+  <h1 class="section-title second-title  mt-8 mb-4">Details</h1>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ng-container *ngIf="errors">
+        <div class="alert alert-error ">Please complete the form correctly !</div>
+        <ul class="list-none pl-1 mt-4">
+          <li *ngFor="let error of errors" class="error" style="margin-top: 4px;">{{ error }}</li>
+        </ul>
+      </ng-container>
+
+      <form  class="mt-4" [formGroup]="form" (submit)="updateDetails()">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <div class="control-wrapper">
+            <input name="name" formControlName="name" class="form-control" type="text" id="name"/>
+          </div>
+          <ng-container *ngIf="!controls.name.pristine && controls.name.invalid">
+
+            <p class="error" style="margin-top: 4px;" *ngIf="controls.name.errors && controls.name.errors.required">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.NAME.REQUIRED' | translate }}
+            </p>
+          </ng-container>
+        </div>
+
+        <div class="form-group ">
+          <label for="email">Email</label>
+          <div class="control-wrapper">
+            <input name="email" formControlName="email" class="form-control" type="email" id="email"/>
+          </div>
+
+          <ng-container *ngIf="!controls.email.pristine && controls.email.invalid">
+
+            <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.required">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.EMAIL.REQUIRED' | translate }}
+            </p>
+            <p class="error" style="margin-top: 4px;" *ngIf="controls.email.errors && controls.email.errors.email">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.EMAIL.EMAIL' | translate }}
+            </p>
+          </ng-container>
+        </div>
+        <button type="submit" class="btn mt-6 btn-primary btn-full btn-radius" [disabled]="processing"> Update details</button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <h1 class="section-title second-title mt-8 mb-4">Password</h1>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ng-container *ngIf="passwordErrors">
+        <div class="alert alert-error ">Please complete the form correctly !</div>
+        <ul class="list-none pl-1 mt-4">
+          <li *ngFor="let error of passwordErrors" class="error" style="margin-top: 4px;">{{ error }}</li>
+        </ul>
+      </ng-container>
+
+      <form  class="mt-4" [formGroup]="passwordForm" (submit)="updatePassword()">
+
+        <div class="form-group">
+          <label for="old_password">Old Password</label>
+          <div class="control-wrapper">
+            <input name="old_password" formControlName="old_password" class="form-control" type="password" id="old_password"/>
+          </div>
+
+          <ng-container *ngIf="!passwordControls.old_password.pristine && passwordControls.old_password.invalid">
+
+            <p class="error" style="margin-top: 4px;"
+               *ngIf="passwordControls.old_password.errors && passwordControls.old_password.errors.required">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.PASSWORD.REQUIRED' | translate }}
+            </p>
+
+          </ng-container>
+        </div>
+
+        <div class="form-group">
+          <label for="new_password">New Password</label>
+          <div class="control-wrapper">
+            <input name="password" formControlName="new_password" class="form-control" type="password" id="new_password"/>
+          </div>
+
+          <ng-container *ngIf="!passwordControls.new_password.pristine && passwordControls.new_password.invalid">
+
+            <p class="error" style="margin-top: 4px;"
+               *ngIf="passwordControls.new_password.errors && passwordControls.new_password.errors.required">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.PASSWORD.REQUIRED' | translate }}
+            </p>
+
+          </ng-container>
+        </div>
+
+
+        <div class="form-group">
+          <label for="new_password_confirmation">New Password Confirmation</label>
+          <div class="control-wrapper">
+            <input name="new_password_confirmation" formControlName="new_password_confirmation" class="form-control"
+                   type="password" id="new_password_confirmation"/>
+          </div>
+          <ng-container *ngIf="!passwordControls.new_password_confirmation.pristine && passwordControls.new_password_confirmation.invalid">
+
+            <p class="error" style="margin-top: 4px;"
+               *ngIf="passwordControls.new_password_confirmation.errors && passwordControls.new_password_confirmation.errors.required">
+              {{ 'AUTH.SIGN_UP.MESSAGES.ERRORS.CONFIRM_PASSWORD.REQUIRED' | translate }}
+            </p>
+
+          </ng-container>
+        </div>
+
+
+        <button type="submit" class="btn mt-6 btn-primary btn-full btn-radius" [disabled]="passwordProcessing"> Change Password</button>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</div>
+
+

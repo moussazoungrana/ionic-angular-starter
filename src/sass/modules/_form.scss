@@ -1,0 +1,51 @@
+.form-group{
+  @apply block w-full mb-4;
+
+  label {
+    @apply block mb-1;
+    color: rgba(0, 33, 82, 0.8);
+  }
+
+  .control-wrapper{
+    position: relative;
+  }
+
+  .form-control{
+    @apply block w-full py-2.5 px-4 rounded outline-0 transition duration-200 ease-in;
+    background-color: #fefeff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    font-family: $font-family;
+    font-size: 14px !important;
+
+    &:focus {
+      border-color: $border-color;
+    }
+
+    &[disabled] {
+      background: #dad2d2;
+      color: rgb(158, 151, 151) !important;
+    }
+  }
+
+
+
+
+
+  textarea {
+    height: auto !important;
+    min-height: 137px !important;
+  }
+
+  select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+
+  /* For IE10 */
+  select::-ms-expand {
+    display: none;
+  }
+}
