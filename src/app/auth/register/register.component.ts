@@ -27,7 +27,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  private constructForm() {
+  /**
+   * Construct form group
+   */
+  private constructForm(): void {
     this.form = this.formBuilder.group({
       name: [
         '',
@@ -48,20 +51,25 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  /**
+   * Getter for form group controls
+   */
   get controls() {
     return this.form.controls;
   }
 
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toastController.create({
-      message: 'Welcome to QuizMakr, before start please, check your your mail to verify your account',
+      message: 'Welcome to App, before start please, check your your mail to verify your account',
       duration: 2000,
       position: position
     });
     await toast.present();
   }
 
-
+  /**
+   * Register user
+   */
   register(): void {
     // Your logic here
     this.router.navigate(['/auth']);

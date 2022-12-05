@@ -27,6 +27,9 @@ export class ResetPasswordComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Construct form group
+   */
   private constructForm() {
     this.form = this.formBuilder.group({
       token: [
@@ -44,6 +47,9 @@ export class ResetPasswordComponent implements OnInit {
     });
   }
 
+  /**
+   * Getter for form group controls
+   */
   get controls() {
     return this.form.controls;
   }
@@ -57,6 +63,9 @@ export class ResetPasswordComponent implements OnInit {
     await toast.present();
   }
 
+  /**
+   * Reset User password
+   */
   resetPassword(): void {
 
     // Your logic here

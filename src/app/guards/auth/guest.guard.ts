@@ -17,8 +17,10 @@ export class GuestGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    // Your logic
+    // Your logic here
     return true;
+
+    // Example
     /*
       if (
         !localStorage.getItem(environment.access_token)

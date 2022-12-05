@@ -13,6 +13,11 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {
   }
 
+  /**
+   * Login User
+   * @param email
+   * @param password
+   */
   login(email: string, password: string) {
     return this.http.post(this.API_URL + '/login', {
       email: email,
@@ -20,20 +25,35 @@ export class AuthenticationService {
     }, noAuthOptions());
   }
 
+  /**
+   * Logout user
+   */
   logout() {
     return this.http.post(this.API_URL + '/logout', {}, authOptions());
   }
 
+  /**
+   * Register user
+   * @param data
+   */
   register(data: any) {
     return this.http.post(this.API_URL + '/register', data, noAuthOptions());
   }
 
+  /**
+   * Send forgot password request
+   * @param email
+   */
   forgotPassword(email: string) {
     return this.http.post(this.API_URL + '/forgot-password', {
       email: email
     }, noAuthOptions())
   }
 
+  /**
+   * Reset user's password
+   * @param data, containing redefinition code, password, and password confirmation
+   */
   resetPassword(data: any) {
     return this.http.post(this.API_URL + '/reset-password', data, noAuthOptions());
   }

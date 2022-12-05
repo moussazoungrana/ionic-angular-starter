@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Construct form group
+   */
   private constructForm(): void {
     this.form = this.formBuilder.group({
       email: [
@@ -39,10 +42,17 @@ export class LoginComponent implements OnInit {
     });
   }
 
+
+  /**
+   * Getter for form group controls
+   */
   get controls() {
     return this.form.controls;
   }
 
+  /**
+   * Authenticate user
+   */
   login() {
 
     this.router.navigate(['/']);

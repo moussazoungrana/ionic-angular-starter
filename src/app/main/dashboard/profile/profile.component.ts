@@ -84,6 +84,10 @@ export class ProfileComponent implements OnInit {
     await toast.present();
   }
 
+
+  /**
+   * Update User infos
+   */
   updateDetails() {
 
     // Your logic here
@@ -106,6 +110,7 @@ export class ProfileComponent implements OnInit {
 
           this.processing = false;
         }, (err: any) => {
+          this.errors = err.error.messages;
           this.processing = false;
         });
          }
@@ -113,6 +118,10 @@ export class ProfileComponent implements OnInit {
 
   }
 
+
+  /**
+   * Update user's password
+   */
   updatePassword() {
 
     // Your logic here

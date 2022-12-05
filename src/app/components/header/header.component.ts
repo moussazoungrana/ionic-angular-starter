@@ -17,11 +17,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Logout User
+   */
   logout(){
 
     // Your logic here
     this.router.navigate(['/auth']);
 
+    // Example
     /*
       return this.authService.logout()
 
@@ -32,7 +36,7 @@ export class HeaderComponent implements OnInit {
       })
 
      */
-    
+
   }
 
 }
