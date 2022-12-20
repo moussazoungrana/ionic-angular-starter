@@ -2,21 +2,21 @@ import {environment} from "../../../environments/environment";
 
 
 /**
- * Get current name
+ * Get current user name
  */
 export const currentUserName = (): string => {
   return currentUser().name;
 }
 
 /**
- * Get current email
+ * Get current user email
  */
 export const currentUserEmail = (): string => {
   return currentUser().email;
 }
 
 /**
- * Get current avatar
+ * Get current user avatar
  */
 export const currentUserAvatar = (): string => {
   return currentUser().avatar;
