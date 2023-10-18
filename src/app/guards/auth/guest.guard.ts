@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import {Observable} from 'rxjs';
 import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GuestGuard implements CanActivate {
+export class GuestGuard  {
 
   constructor(
     private router: Router
